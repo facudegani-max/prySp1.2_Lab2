@@ -10,51 +10,15 @@ namespace ClinicaApp
     // Formulario para gestionar especialidades
     public partial class frmEspecialidades : Form
     {
-        private Label lblNumero;
-        private TextBox txtNumero;
-        private Label lblNombre;
-        private TextBox txtNombre;
-        private Button btnAceptar;
-        private Button btnCancelar;
-        private Button btnIrMedicos;
-        private Button btnConsultar;
-        private Button btnSalir;
-
         private Archivo archivo = new Archivo();
 
         public frmEspecialidades()
         {
+            InitializeComponent();
+
             Text = "Especialidades";
             Size = new Size(400, 260);
             StartPosition = FormStartPosition.CenterScreen;
-
-            InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            lblNumero = new Label { Text = "Número", Location = new Point(20, 20), AutoSize = true };
-            txtNumero = new TextBox { Location = new Point(100, 18), Width = 200 };
-
-            lblNombre = new Label { Text = "Nombre", Location = new Point(20, 60), AutoSize = true };
-            txtNombre = new TextBox { Location = new Point(100, 58), Width = 250 };
-
-            btnAceptar = new Button { Text = "Aceptar", Location = new Point(20, 110), Width = 90 };
-            btnAceptar.Click += BtnAceptar_Click;
-
-            btnCancelar = new Button { Text = "Cancelar", Location = new Point(120, 110), Width = 90 };
-            btnCancelar.Click += BtnCancelar_Click;
-
-            btnIrMedicos = new Button { Text = "Ir a Médicos", Location = new Point(220, 110), Width = 110 };
-            btnIrMedicos.Click += BtnIrMedicos_Click;
-
-            btnConsultar = new Button { Text = "Consultar", Location = new Point(20, 150), Width = 90 };
-            btnConsultar.Click += BtnConsultar_Click;
-
-            btnSalir = new Button { Text = "Salir", Location = new Point(120, 150), Width = 90 };
-            btnSalir.Click += (s, e) => Application.Exit();
-
-            Controls.AddRange(new Control[] { lblNumero, txtNumero, lblNombre, txtNombre, btnAceptar, btnCancelar, btnIrMedicos, btnConsultar, btnSalir });
         }
 
         // Evento Aceptar: valida y graba especialidad
@@ -114,6 +78,11 @@ namespace ClinicaApp
             txtNumero.Clear();
             txtNombre.Clear();
             txtNumero.Focus();
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

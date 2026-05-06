@@ -1,20 +1,26 @@
 using System;
-using System.Windows.Forms;
-using ClinicaApp;
+using System; // importa tipos base
+using System.Windows.Forms; // necesario para la ejecución de WinForms
+using ClinicaApp; // importa el espacio de nombres de los formularios y clases de negocio
 
-namespace prySp1._2_Lab2
+namespace prySp1._2_Lab2 // namespace del proyecto
 {
     internal static class Program
     {
         /// <summary>
-        ///  The main entry point for the application.
+        ///  Punto de entrada principal de la aplicación.
         /// </summary>
-        [STAThread]
+        [STAThread] // indica que el hilo principal usa el modelo de subprocesamiento STA necesario para WinForms
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            // Inicializa la configuración de la aplicación (DPI, fuente por defecto, etc.)
             ApplicationConfiguration.Initialize();
+
+            // Crear instancia de Archivo y eliminar datos previos para iniciar limpio
+            var archivo = new Archivo(); // instancia que maneja los archivos de datos
+            archivo.LimpiarDatos(); // elimina los archivos de datos si existen
+
+            // Inicia la aplicación mostrando el formulario de especialidades
             Application.Run(new frmEspecialidades());
         }
     }
