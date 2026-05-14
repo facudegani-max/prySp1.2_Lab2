@@ -44,27 +44,31 @@ namespace ClinicaApp
             // 
             // btnConsultar
             // 
-            btnConsultar.Location = new Point(480, 16);
+            btnConsultar.BackColor = SystemColors.ActiveCaption;
+            btnConsultar.Location = new Point(480, 12);
             btnConsultar.Name = "btnConsultar";
-            btnConsultar.Size = new Size(90, 26);
+            btnConsultar.Size = new Size(97, 30);
             btnConsultar.TabIndex = 2;
             btnConsultar.Text = "Consultar";
+            btnConsultar.UseVisualStyleBackColor = false;
             btnConsultar.Click += BtnConsultar_Click;
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(480, 52);
+            btnSalir.BackColor = Color.IndianRed;
+            btnSalir.Location = new Point(469, 334);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(90, 26);
+            btnSalir.Size = new Size(111, 40);
             btnSalir.TabIndex = 3;
             btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += BtnSalir_Click;
             // 
             // dgvMedicos
             // 
             dgvMedicos.AllowUserToAddRows = false;
             dgvMedicos.Columns.AddRange(new DataGridViewColumn[] { colMat, colNom });
-            dgvMedicos.Location = new Point(20, 84);
+            dgvMedicos.Location = new Point(20, 48);
             dgvMedicos.Name = "dgvMedicos";
             dgvMedicos.ReadOnly = true;
             dgvMedicos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -90,7 +94,7 @@ namespace ClinicaApp
             // 
             // frmConsulta
             // 
-            ClientSize = new Size(620, 396);
+            ClientSize = new Size(598, 393);
             Controls.Add(lblEspecialidad);
             Controls.Add(cmbEspecialidad);
             Controls.Add(btnConsultar);

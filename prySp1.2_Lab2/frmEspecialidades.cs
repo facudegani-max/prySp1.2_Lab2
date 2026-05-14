@@ -61,17 +61,6 @@ namespace ClinicaApp
             LimpiarCampos();
         }
 
-        private void BtnIrMedicos_Click(object sender, EventArgs e)
-        {
-            var frm = new frmMedicos();
-            frm.ShowDialog();
-        }
-
-        private void BtnConsultar_Click(object sender, EventArgs e)
-        {
-            var frm = new frmConsulta();
-            frm.ShowDialog();
-        }
 
         private void LimpiarCampos()
         {
@@ -82,7 +71,8 @@ namespace ClinicaApp
 
         private void BtnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            // Cerrar este formulario para volver al menú principal
+            Close();
         }
     }
 }
