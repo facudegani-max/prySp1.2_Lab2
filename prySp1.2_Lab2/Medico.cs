@@ -11,20 +11,20 @@ namespace ClinicaApp // espacio de nombres de la aplicación
         public int Matricula { get; set; }
 
         // Propiedad que almacena el nombre del médico
-        public string Nombre { get; set; }
+        public string NombreMedico { get; set; }
 
-        // Propiedad que almacena el número de la especialidad del médico
-        public int NumeroEspecialidad { get; set; }
+        // Propiedad que almacena el id de la especialidad del médico
+        public int IdEspecialidad { get; set; }
 
         // Constructor por defecto (sin parámetros)
         public Medico() { }
 
         // Constructor que inicializa todas las propiedades
-        public Medico(int matricula, string nombre, int numeroEspecialidad)
+        public Medico(int matricula, string nombreMedico, int idEspecialidad)
         {
             Matricula = matricula; // asigna la matrícula
-            Nombre = nombre; // asigna el nombre
-            NumeroEspecialidad = numeroEspecialidad; // asigna la especialidad
+            NombreMedico = nombreMedico; // asigna el nombre
+            IdEspecialidad = idEspecialidad; // asigna la especialidad
         }
     }
 }

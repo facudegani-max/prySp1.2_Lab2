@@ -28,8 +28,8 @@ namespace ClinicaApp
             var list = archivo.LeerEspecialidades();
             cmbEspecialidad.DataSource = null;
             cmbEspecialidad.DataSource = list;
-            cmbEspecialidad.DisplayMember = "Nombre";
-            cmbEspecialidad.ValueMember = "Numero";
+            cmbEspecialidad.DisplayMember = "NombreEspecialidad";
+            cmbEspecialidad.ValueMember = "IdEspecialidad";
         }
 
         private void BtnConsultar_Click(object sender, EventArgs e)
@@ -40,8 +40,8 @@ namespace ClinicaApp
                 return;
             }
 
-            int numero = (int)cmbEspecialidad.SelectedValue;
-            var medicos = archivo.ObtenerMedicosPorEspecialidad(numero);
+            int idEspecialidad = (int)cmbEspecialidad.SelectedValue;
+            var medicos = archivo.ObtenerMedicosPorEspecialidad(idEspecialidad);
 
             if (medicos == null || medicos.Count == 0)
             {
@@ -51,7 +51,7 @@ namespace ClinicaApp
             }
 
             // Mostrar en DataGridView
-            var tabla = medicos.Select(m => new { Matricula = m.Matricula, Nombre = m.Nombre }).ToList();
+            var tabla = medicos.Select(m => new { Matricula = m.Matricula, NombreMedico = m.NombreMedico }).ToList();
             dgvMedicos.DataSource = tabla;
         }
 

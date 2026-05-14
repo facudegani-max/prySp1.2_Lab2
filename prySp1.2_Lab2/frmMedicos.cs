@@ -21,8 +21,8 @@ namespace ClinicaApp
             var list = archivo.LeerEspecialidades();
             cmbEspecialidad.DataSource = null;
             cmbEspecialidad.DataSource = list;
-            cmbEspecialidad.DisplayMember = "Nombre";
-            cmbEspecialidad.ValueMember = "Numero";
+            cmbEspecialidad.DisplayMember = "NombreEspecialidad";
+            cmbEspecialidad.ValueMember = "IdEspecialidad";
         }
 
         private void BtnAceptar_Click(object sender, EventArgs e)
@@ -52,8 +52,8 @@ namespace ClinicaApp
                 return;
             }
 
-            int numeroEspecialidad = (int)cmbEspecialidad.SelectedValue;
-            var med = new Medico(matricula, nombre, numeroEspecialidad);
+            int idEspecialidad = (int)cmbEspecialidad.SelectedValue;
+            var med = new Medico(matricula, nombre, idEspecialidad);
             try
             {
                 archivo.GrabarMedico(med);

@@ -75,6 +75,18 @@ namespace ClinicaApp
             Controls.Add(btnMedicos);
             Controls.Add(btnConsulta);
             Controls.Add(btnSalir);
+            // statusStrip
+            statusStrip1 = new StatusStrip();
+            toolStripStatusLabelConexion = new ToolStripStatusLabel();
+            statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { toolStripStatusLabelConexion });
+            statusStrip1.Location = new Point(0, 348);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(400, 22);
+            statusStrip1.TabIndex = 4;
+            statusStrip1.Text = "statusStrip1";
+            toolStripStatusLabelConexion.Name = "toolStripStatusLabelConexion";
+            toolStripStatusLabelConexion.Text = "Estado: Desconocido";
+            Controls.Add(statusStrip1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
@@ -89,5 +101,7 @@ namespace ClinicaApp
         private Button btnMedicos;
         private Button btnConsulta;
         private Button btnSalir;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel toolStripStatusLabelConexion;
     }
 }

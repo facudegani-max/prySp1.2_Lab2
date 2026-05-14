@@ -87,8 +87,8 @@ namespace ClinicaApp
             // colNom
             // 
             colNom.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            colNom.DataPropertyName = "Nombre";
-            colNom.HeaderText = "Nombre";
+            colNom.DataPropertyName = "NombreMedico";
+            colNom.HeaderText = "NombreMedico";
             colNom.Name = "colNom";
             colNom.ReadOnly = true;
             // 

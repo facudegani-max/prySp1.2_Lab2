@@ -16,10 +16,6 @@ namespace prySp1._2_Lab2 // namespace del proyecto
             // Inicializa la configuración de la aplicación (DPI, fuente por defecto, etc.)
             ApplicationConfiguration.Initialize();
 
-            // Crear instancia de Archivo y eliminar datos previos para iniciar limpio
-            var archivo = new Archivo(); // instancia que maneja los archivos de datos
-            archivo.LimpiarDatos(); // elimina los archivos de datos si existen
-
             // Inicia la aplicación mostrando el formulario de menú principal
             Application.Run(new frmMenu());
         }
